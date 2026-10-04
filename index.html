@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO ===== -->
+  <title>Anggie Alcedo · QA Automation, WordPress y Python</title>
+  <meta name="description" content="Ingeniera de Sistemas con más de 10 años de experiencia en QA manual y automatizado, desarrollo WordPress y backend con Python. Disponible para trabajo remoto.">
+  <meta name="author" content="Anggie Alcedo">
+  <meta name="keywords" content="QA Automation, QA Tester, Selenium, Pytest, WordPress, Divi, Python, Flask, Django, trabajo remoto, Venezuela">
+  <meta name="theme-color" content="#0F1E33">
+  <link rel="canonical" href="https://alcedoanggi-crypto.github.io/">
+
+  <!-- ===== Open Graph (LinkedIn, WhatsApp, Facebook) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Anggie Alcedo">
+  <meta property="og:title" content="Anggie Alcedo · QA Automation, WordPress y Python">
+  <meta property="og:description" content="Construyo y pruebo software de calidad. +10 años en QA, WordPress y backend con Python. Disponible para trabajo remoto.">
+  <meta property="og:url" content="https://alcedoanggi-crypto.github.io/">
+  <meta property="og:image" content="https://alcedoanggi-crypto.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portafolio de Anggie Alcedo">
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anggie Alcedo · QA Automation, WordPress y Python">
+  <meta name="twitter:description" content="Construyo y pruebo software de calidad. Disponible para trabajo remoto.">
+  <meta name="twitter:image" content="https://alcedoanggi-crypto.github.io/assets/img/og-image.png">
+
+  <!-- Favicon SVG en línea -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232E7DB5'/%3E%3Cstop offset='1' stop-color='%2338BDF8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230F1E33'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='url(%23g)'%3EAA%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes e íconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Aplica el tema guardado antes de pintar para evitar parpadeo -->
+  <script>
+    try { var t = localStorage.getItem('aa-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <!-- Fondo animado: red de datos -->
+  <canvas id="network" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="nav__logo" aria-label="Ir al inicio">
+        <span class="nav__logo-mark">AA</span>
+        <span class="nav__logo-text">Anggie<span>.</span></span>
+      </a>
+
+      <nav aria-label="Principal">
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#experiencia" class="nav__link">Experiencia</a></li>
+          <li><a href="#educacion" class="nav__link">Educación</a></li>
+          <li><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn nav__burger" id="navBurger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="hero__hello reveal"><span class="dot-live"></span> Disponible para trabajo remoto</p>
+          <h1 class="hero__name reveal">Anggie <span class="gradient-text">Alcedo</span></h1>
+          <p class="hero__role reveal" aria-live="polite">
+            <span class="typewriter" id="typewriter">QA Automation Engineer</span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero__subtitle reveal">Ingeniera de Sistemas · QA Testing · WordPress · Python</p>
+          <p class="hero__desc reveal">Construyo y pruebo software de calidad. Más de 10 años de experiencia en QA manual y automatizado, desarrollo web con WordPress y sistemas backend con Python. Disponible para trabajo remoto.</p>
+          <div class="hero__cta reveal">
+            <a href="#proyectos" class="btn btn--primary"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Ver proyectos</a>
+            <a href="assets/CV_Anggie_Alcedo.pdf" class="btn btn--ghost" download><i class="fa-solid fa-download" aria-hidden="true"></i> Descargar CV</a>
+          </div>
+          <ul class="hero__social reveal" aria-label="Redes">
+            <li><a href="https://github.com/alcedoanggi-crypto" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:alcedoanggi@gmail.com" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://wa.me/584249592166" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://www.tiktok.com/@alcedo.alcedo" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="hero__photo reveal">
+          <div class="photo">
+            <div class="photo__ring" aria-hidden="true"></div>
+            <div class="photo__inner">
+              <img src="assets/img/foto.jpg" alt="Foto de Anggie Alcedo" width="360" height="360" id="profilePhoto">
+              <span class="photo__fallback" aria-hidden="true">AA</span>
+            </div>
+            <div class="photo__badge photo__badge--1 glass"><i class="fa-solid fa-bug-slash" aria-hidden="true"></i> QA Automation</div>
+            <div class="photo__badge photo__badge--2 glass"><i class="fa-brands fa-wordpress" aria-hidden="true"></i> WordPress</div>
+            <div class="photo__badge photo__badge--3 glass"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contadores -->
+      <div class="container">
+        <ul class="stats reveal">
+          <li class="stats__item glass"><strong><span class="counter" data-target="10">0</span>+</strong><span>años de experiencia</span></li>
+          <li class="stats__item glass"><strong><span class="counter" data-target="6">0</span></strong><span>sistemas desarrollados</span></li>
+          <li class="stats__item glass"><strong><span class="counter" data-target="30">0</span>+</strong><span>certificaciones</span></li>
+        </ul>
+      </div>
+
+      <a href="#sobre-mi" class="scroll-hint" aria-label="Bajar a Sobre mí"><span></span></a>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section class="section" id="sobre-mi">
+      <div class="container about">
+        <header class="section__head reveal">
+          <span class="section__kicker">01 · Sobre mí</span>
+          <h2 class="section__title">Calidad de principio a fin</h2>
+        </header>
+        <div class="about__grid">
+          <div class="about__text glass reveal">
+            <p>Ingeniera de Sistemas con <strong>Maestría en Gerencia de TIC</strong>. Especializada en <strong>QA Testing</strong> (manual y automatizado), desarrollo de sitios en <strong>WordPress</strong>, desarrollo backend con <strong>Python y PHP</strong>, e infraestructura TI.</p>
+            <p>Experiencia trabajando <strong>100% remoto</strong> para una empresa en Chile con equipos distribuidos bajo <strong>Scrum</strong>.</p>
+          </div>
+          <ul class="about__facts reveal">
+            <li class="glass"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><strong>Ubicación</strong><span>Caracas, Venezuela</span></div></li>
+            <li class="glass"><i class="fa-solid fa-clock" aria-hidden="true"></i><div><strong>Zona horaria</strong><span>GMT-4</span></div></li>
+            <li class="glass"><i class="fa-solid fa-laptop-house" aria-hidden="true"></i><div><strong>Modalidad</strong><span>Remoto · equipos distribuidos</span></div></li>
+            <li class="glass"><i class="fa-solid fa-people-group" aria-hidden="true"></i><div><strong>Metodología</strong><span>Scrum · Ágil</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">02 · Servicios</span>
+          <h2 class="section__title">Cómo puedo ayudar a tu equipo</h2>
+        </header>
+        <div class="services">
+          <article class="service glass reveal">
+            <div class="service__icon"><i class="fa-solid fa-vial-circle-check" aria-hidden="true"></i></div>
+            <h3>QA Testing y Automatización</h3>
+            <p>Pruebas funcionales, de API y de rendimiento; automatización con Selenium, Pytest y Postman; pruebas de estrés con JMeter.</p>
+          </article>
+          <article class="service glass reveal">
+            <div class="service__icon"><i class="fa-brands fa-wordpress-simple" aria-hidden="true"></i></div>
+            <h3>Desarrollo WordPress</h3>
+            <p>Sitios corporativos, tiendas y landing pages con WordPress y Divi, optimizados y responsive.</p>
+          </article>
+          <article class="service glass reveal">
+            <div class="service__icon"><i class="fa-brands fa-python" aria-hidden="true"></i></div>
+            <h3>Desarrollo Backend con Python</h3>
+            <p>Sistemas web con Flask, Django, SQLAlchemy y PostgreSQL bajo arquitectura MVC.</p>
+          </article>
+          <article class="service glass reveal">
+            <div class="service__icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></div>
+            <h3>Soporte e Infraestructura TI</h3>
+            <p>Redes Cisco, virtualización con Proxmox, Linux y seguridad.</p>
+          </article>
+        </div>
+
+        <!-- Portafolios en PDF -->
+        <h3 class="subhead reveal"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Portafolios en PDF</h3>
+        <div class="docs">
+          <article class="doc glass reveal">
+            <div class="service__icon"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></div>
+            <div>
+              <h4>Servicios de QA Testing</h4>
+              <p>Pruebas manuales, de API, de rendimiento y automatizadas. Incluye proceso de trabajo, herramientas y ejemplos de reporte de bug y casos de API.</p>
+              <a class="btn btn--small" href="assets/docs/Anggie_Alcedo_Portafolio_QA_Testing.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver PDF</a>
+            </div>
+          </article>
+          <article class="doc glass reveal">
+            <div class="service__icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+            <div>
+              <h4>Automatización de Pruebas</h4>
+              <p>Proyecto end-to-end con Selenium, Python y Pytest bajo Page Object Model: 10 casos automatizados, reporte HTML y ejemplos de código.</p>
+              <a class="btn btn--small" href="assets/docs/Anggie_Alcedo_Automatizacion_QA.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver PDF</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <!-- Ajusta los porcentajes cambiando style="--level: X%" -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">03 · Habilidades</span>
+          <h2 class="section__title">Mi caja de herramientas</h2>
+        </header>
+        <div class="skills">
+          <article class="skill-group glass reveal">
+            <h3><i class="fa-solid fa-bug" aria-hidden="true"></i> QA &amp; Testing</h3>
+            <ul>
+              <li class="bar" style="--level:95%"><span>Selenium</span><em>95%</em><i></i></li>
+              <li class="bar" style="--level:92%"><span>Pytest</span><em>92%</em><i></i></li>
+              <li class="bar" style="--level:95%"><span>Postman</span><em>95%</em><i></i></li>
+              <li class="bar" style="--level:85%"><span>JMeter</span><em>85%</em><i></i></li>
+              <li class="bar" style="--level:80%"><span>Charles Proxy</span><em>80%</em><i></i></li>
+              <li class="bar" style="--level:85%"><span>BDD</span><em>85%</em><i></i></li>
+              <li class="bar" style="--level:75%"><span>Jenkins</span><em>75%</em><i></i></li>
+            </ul>
+          </article>
+          <article class="skill-group glass reveal">
+            <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Desarrollo web</h3>
+            <ul>
+              <li class="bar" style="--level:95%"><span>WordPress</span><em>95%</em><i></i></li>
+              <li class="bar" style="--level:92%"><span>Divi</span><em>92%</em><i></i></li>
+              <li class="bar" style="--level:90%"><span>HTML / CSS</span><em>90%</em><i></i></li>
+              <li class="bar" style="--level:80%"><span>JavaScript</span><em>80%</em><i></i></li>
+              <li class="bar" style="--level:80%"><span>PHP</span><em>80%</em><i></i></li>
+              <li class="bar" style="--level:70%"><span>Laravel</span><em>70%</em><i></i></li>
+              <li class="bar" style="--level:65%"><span>Angular</span><em>65%</em><i></i></li>
+            </ul>
+          </article>
+          <article class="skill-group glass reveal">
+            <h3><i class="fa-solid fa-database" aria-hidden="true"></i> Backend y datos</h3>
+            <ul>
+              <li class="bar" style="--level:90%"><span>Python</span><em>90%</em><i></i></li>
+              <li class="bar" style="--level:88%"><span>Flask</span><em>88%</em><i></i></li>
+              <li class="bar" style="--level:75%"><span>Django</span><em>75%</em><i></i></li>
+              <li class="bar" style="--level:85%"><span>SQLAlchemy</span><em>85%</em><i></i></li>
+              <li class="bar" style="--level:88%"><span>PostgreSQL</span><em>88%</em><i></i></li>
+              <li class="bar" style="--level:85%"><span>MySQL</span><em>85%</em><i></i></li>
+              <li class="bar" style="--level:75%"><span>SQL Server</span><em>75%</em><i></i></li>
+            </ul>
+          </article>
+          <article class="skill-group glass reveal">
+            <h3><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Herramientas</h3>
+            <ul>
+              <li class="bar" style="--level:90%"><span>Git / GitLab</span><em>90%</em><i></i></li>
+              <li class="bar" style="--level:95%"><span>Jira</span><em>95%</em><i></i></li>
+              <li class="bar" style="--level:85%"><span>Confluence</span><em>85%</em><i></i></li>
+              <li class="bar" style="--level:90%"><span>Trello</span><em>90%</em><i></i></li>
+              <li class="bar" style="--level:92%"><span>Scrum</span><em>92%</em><i></i></li>
+              <li class="bar" style="--level:75%"><span>Figma</span><em>75%</em><i></i></li>
+              <li class="bar" style="--level:70%"><span>Adobe XD</span><em>70%</em><i></i></li>
+            </ul>
+          </article>
+          <article class="skill-group glass reveal">
+            <h3><i class="fa-solid fa-server" aria-hidden="true"></i> Infraestructura</h3>
+            <ul>
+              <li class="bar" style="--level:88%"><span>Linux</span><em>88%</em><i></i></li>
+              <li class="bar" style="--level:85%"><span>Proxmox</span><em>85%</em><i></i></li>
+              <li class="bar" style="--level:85%"><span>Cisco CCNA</span><em>85%</em><i></i></li>
+              <li class="bar" style="--level:80%"><span>pfSense</span><em>80%</em><i></i></li>
+              <li class="bar" style="--level:78%"><span>Zabbix</span><em>78%</em><i></i></li>
+              <li class="bar" style="--level:75%"><span>Kali Linux</span><em>75%</em><i></i></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <!-- Cada proyecto: data-category con las categorías (python, gestion, web) separadas por espacio -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">04 · Proyectos</span>
+          <h2 class="section__title">Sistemas que he construido</h2>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrar proyectos">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter" type="button" data-filter="python" aria-pressed="false">Python</button>
+          <button class="filter" type="button" data-filter="gestion" aria-pressed="false">Gestión</button>
+          <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+        </div>
+
+        <div class="projects">
+          <!-- Proyecto 1 -->
+          <article class="project glass reveal" data-category="python gestion">
+            <div class="carousel" data-title="Sistema de Facturación" data-icon="fa-file-invoice-dollar">
+              <div class="carousel__track">
+                <img src="assets/img/facturacion-1.png" alt="Sistema de Facturación: panel de control con ventas, clientes y transacciones" loading="lazy">
+                <img src="assets/img/facturacion-2.png" alt="Sistema de Facturación: gestión de facturas" loading="lazy">
+                <img src="assets/img/facturacion-3.png" alt="Sistema de Facturación: inventario de productos" loading="lazy">
+              </div>
+            </div>
+            <div class="project__body">
+              <h3>Sistema de Facturación</h3>
+              <p>Facturación electrónica con gestión de clientes, productos y reportes.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>MVC</li></ul>
+              <a class="btn btn--small" href="https://github.com/alcedoanggi-crypto/sistema_facturacion" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código en GitHub</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project glass reveal" data-category="python gestion">
+            <div class="carousel" data-title="Inventario App" data-icon="fa-boxes-stacked">
+              <div class="carousel__track">
+                <img src="assets/img/inventario-1.png" alt="Inventario App: dashboard con stock y movimientos" loading="lazy">
+                <img src="assets/img/inventario-2.png" alt="Inventario App: listado de productos" loading="lazy">
+                <img src="assets/img/inventario-3.png" alt="Inventario App: movimientos de stock" loading="lazy">
+              </div>
+            </div>
+            <div class="project__body">
+              <h3>Inventario App</h3>
+              <p>Control de inventario con entradas, salidas, existencias y alertas de stock.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>PostgreSQL</li><li>Docker</li></ul>
+              <a class="btn btn--small" href="https://github.com/alcedoanggi-crypto/inventario_app" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código en GitHub</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project glass reveal" data-category="python gestion web">
+            <div class="carousel" data-title="ITAM System" data-icon="fa-laptop-code">
+              <div class="carousel__track">
+                <img src="assets/img/itam-1.png" alt="ITAM System: panel de control de equipos" loading="lazy">
+                <img src="assets/img/itam-2.png" alt="ITAM System: listado de equipos tecnológicos" loading="lazy">
+                <img src="assets/img/itam-3.png" alt="ITAM System: inicio de sesión" loading="lazy">
+              </div>
+            </div>
+            <div class="project__body">
+              <h3>ITAM System</h3>
+              <p>Gestión de activos tecnológicos: registro de equipos, asignaciones y mantenimiento.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>JavaScript</li><li>HTML/CSS</li></ul>
+              <a class="btn btn--small" href="https://github.com/alcedoanggi-crypto/itam_system" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código en GitHub</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 -->
+          <article class="project glass reveal" data-category="python web">
+            <div class="carousel" data-title="Sistema para Restaurantes" data-icon="fa-utensils">
+              <div class="carousel__track">
+                <img src="assets/img/restaurante-1.png" alt="Sistema para Restaurantes: salón con estado de mesas" loading="lazy">
+                <img src="assets/img/restaurante-2.png" alt="Sistema para Restaurantes: toma de pedido" loading="lazy">
+                <img src="assets/img/restaurante-3.png" alt="Sistema para Restaurantes: pedidos en cocina" loading="lazy">
+              </div>
+            </div>
+            <div class="project__body">
+              <h3>Sistema para Restaurantes</h3>
+              <p>Gestión de pedidos, mesas, menú y ventas.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>HTML/CSS</li></ul>
+              <a class="btn btn--small" href="https://github.com/alcedoanggi-crypto/sistema_restaurantes" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código en GitHub</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 5 -->
+          <article class="project glass reveal" data-category="python gestion">
+            <div class="carousel" data-title="Sistema de RRHH" data-icon="fa-users-gear">
+              <div class="carousel__track">
+                <img src="assets/img/rrhh-1.png" alt="Sistema de RRHH: tablero ejecutivo" loading="lazy">
+                <img src="assets/img/rrhh-2.png" alt="Sistema de RRHH: listado de empleados" loading="lazy">
+                <img src="assets/img/rrhh-3.png" alt="Sistema de RRHH: nómina mensual" loading="lazy">
+              </div>
+            </div>
+            <div class="project__body">
+              <h3>Sistema de RRHH</h3>
+              <p>Gestión de empleados, nómina, asistencias y permisos, con tablero ejecutivo.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>HTML/CSS</li></ul>
+              <a class="btn btn--small" href="https://github.com/alcedoanggi-crypto/Sistema-RRHH-nomina" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código en GitHub</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 6 -->
+          <article class="project glass reveal" data-category="python gestion web">
+            <div class="carousel" data-title="GestorPro" data-icon="fa-diagram-project">
+              <div class="carousel__track">
+                <img src="assets/img/gestorpro-1.png" alt="GestorPro: dashboard con KPIs y gráficos" loading="lazy">
+                <img src="assets/img/gestorpro-2.png" alt="GestorPro: cronograma de Gantt de un proyecto" loading="lazy">
+                <img src="assets/img/gestorpro-3.png" alt="GestorPro: reportes con gráficos y exportación" loading="lazy">
+              </div>
+            </div>
+            <div class="project__body">
+              <h3>GestorPro</h3>
+              <p>Gestión de proyectos, tareas y equipos con Gantt interactivo, dashboard y reportes PDF/Excel.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>PostgreSQL</li><li>Chart.js</li><li>pytest</li></ul>
+              <a class="btn btn--small" href="https://github.com/alcedoanggi-crypto/gestorpro" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código en GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">05 · Experiencia</span>
+          <h2 class="section__title">Trayectoria profesional</h2>
+        </header>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__card glass">
+              <span class="timeline__date">2025 – Actualidad</span>
+              <h3>Gerente de Producción</h3>
+              <p class="timeline__company">iDHOUSE</p>
+              <ul>
+                <li>Coordino la planificación y entrega de proyectos del equipo de producción.</li>
+                <li>Defino procesos de control de calidad antes de cada entrega al cliente.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__card glass">
+              <span class="timeline__date">2024 – 2025</span>
+              <h3>Analista IT</h3>
+              <p class="timeline__company">Supermercado Forum</p>
+              <ul>
+                <li>Soporte y mantenimiento de la infraestructura de sistemas y redes de las tiendas.</li>
+                <li>Gestión de incidencias y mejora de la disponibilidad de los servicios.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__card glass">
+              <span class="timeline__date">2022 – 2023</span>
+              <h3>Analista QA (Manual &amp; Automation)</h3>
+              <p class="timeline__company">Multifiber, Chile · Remoto</p>
+              <ul>
+                <li>Automaticé pruebas funcionales y de API con Selenium, Pytest y Postman.</li>
+                <li>Trabajé en equipos distribuidos bajo Scrum, con reporte de defectos en Jira.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__card glass">
+              <span class="timeline__date">2021 – 2022</span>
+              <h3>Analista de QA</h3>
+              <p class="timeline__company">PagueTodo</p>
+              <ul>
+                <li>Diseño y ejecución de casos de prueba para plataformas de pagos.</li>
+                <li>Pruebas de rendimiento y estrés con JMeter.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__card glass">
+              <span class="timeline__date">2021 – 2024</span>
+              <h3>Consultora de Data Center</h3>
+              <p class="timeline__company">CANTV</p>
+              <ul>
+                <li>Consultoría en operación y monitoreo de servicios del data center.</li>
+                <li>Documentación de procedimientos y buenas prácticas de infraestructura.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__card glass">
+              <span class="timeline__date">2015 – 2021</span>
+              <h3>Analista de Seguridad Informática / Proyectos</h3>
+              <p class="timeline__company">SUNAGRO</p>
+              <ul>
+                <li>Implementé políticas de seguridad y monitoreo de redes con pfSense y Zabbix.</li>
+                <li>Gestioné proyectos tecnológicos institucionales de principio a fin.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCACIÓN ===================== -->
+    <section class="section" id="educacion">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">06 · Educación</span>
+          <h2 class="section__title">Formación y certificaciones</h2>
+        </header>
+
+        <h3 class="subhead reveal"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Educación</h3>
+        <div class="edu">
+          <article class="edu__card glass reveal"><span class="edu__year">2021</span><h4>Maestría en Creación Intelectual en Informática</h4><p>UNESR</p></article>
+          <article class="edu__card glass reveal"><span class="edu__year">2019</span><h4>Maestría en Gerencia de TIC</h4><p>UNEFA</p></article>
+          <article class="edu__card glass reveal"><span class="edu__year">2018</span><h4>Diplomado en Gerencia de Proyectos</h4><p>U. Alejandro de Humboldt</p></article>
+          <article class="edu__card glass reveal"><span class="edu__year">2012</span><h4>Ingeniería de Sistemas</h4><p>UNEFA</p></article>
+        </div>
+
+        <h3 class="subhead reveal"><i class="fa-solid fa-certificate" aria-hidden="true"></i> Certificaciones</h3>
+        <ul class="certs reveal">
+          <li><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Cisco CCNA 1-3</li>
+          <li><i class="fa-brands fa-python" aria-hidden="true"></i> Python &amp; Backend (114 h)</li>
+          <li><i class="fa-solid fa-robot" aria-hidden="true"></i> QA Automation con Selenium y Python</li>
+          <li><i class="fa-brands fa-wordpress" aria-hidden="true"></i> WordPress Nivel 1 y 2</li>
+          <li><i class="fa-solid fa-palette" aria-hidden="true"></i> WordPress con Divi</li>
+          <li><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Análisis de datos</li>
+          <li><i class="fa-brands fa-laravel" aria-hidden="true"></i> Laravel y Angular</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact glass reveal">
+          <span class="section__kicker">07 · Contacto</span>
+          <h2 class="contact__title">¿Buscas una profesional de QA o WordPress para tu equipo remoto? <span class="gradient-text">Hablemos.</span></h2>
+          <ul class="contact__list">
+            <li><a href="mailto:alcedoanggi@gmail.com" class="contact__item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span><small>Email</small>alcedoanggi@gmail.com</span></a></li>
+            <li><a href="https://wa.me/584249592166" target="_blank" rel="noopener" class="contact__item"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span><small>WhatsApp</small>+58 424 959 2166</span></a></li>
+            <li><a href="https://github.com/alcedoanggi-crypto" target="_blank" rel="noopener" class="contact__item"><i class="fa-brands fa-github" aria-hidden="true"></i><span><small>GitHub</small>alcedoanggi-crypto</span></a></li>
+            <li><a href="https://www.tiktok.com/@alcedo.alcedo" target="_blank" rel="noopener" class="contact__item"><i class="fa-brands fa-tiktok" aria-hidden="true"></i><span><small>TikTok</small>@alcedo.alcedo</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Anggie Alcedo · Hecho con dedicación y buenas prácticas de QA.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/584249592166" class="whatsapp" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
